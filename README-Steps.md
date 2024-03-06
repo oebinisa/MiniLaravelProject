@@ -49,30 +49,30 @@ Laravel project intoducing the basic constructs.
 - Start MySQL Service:
     - This command starts the MySQL service and ensures that it automatically starts on system boot.
 
-        brew services start mysql
+            brew services start mysql
 
 - Secure MySQL Installation (Optional, but recommended):
     - For security purposes, you can run a script that will help you secure your MySQL installation.
     - Follow the on-screen prompts to set a root password and answer other security-related questions:
 
-        mysql_secure_installation
+            mysql_secure_installation
 
 - Access MySQL Shell:
     - Access the MySQL shell using the root user and the password you set during the secure installation:
 
-        mysql -u root -p
+            mysql -u root -p
 
 - Create a Database:
     - Inside the MySQL shell, run the following SQL command to create a database named "laravel"
 
-        CREATE DATABASE laravel;
+            CREATE DATABASE laravel;
 
 - Create a User and Grant Permissions (Optional, but recommended):
     - While still in the MySQL shell, you can create a new user and grant necessary privileges to the "laravel" database. Replace 'your_user' and 'your_password' with your preferred username and password:
 
-        CREATE USER 'your_user'@'localhost' IDENTIFIED BY 'your_password';
-        GRANT ALL PRIVILEGES ON laravel.* TO 'your_user'@'localhost';
-        FLUSH PRIVILEGES;
+            CREATE USER 'your_user'@'localhost' IDENTIFIED BY 'your_password';
+            GRANT ALL PRIVILEGES ON laravel.* TO 'your_user'@'localhost';
+            FLUSH PRIVILEGES;
 
 - Exit MySQL Shell:
 
@@ -81,11 +81,11 @@ Laravel project intoducing the basic constructs.
 - Verify MySQL Installation:
     - You can verify that MySQL is running and the "laravel" database has been created by logging in again:
 
-        mysql -u your_user -p
+            mysql -u your_user -p
 
     - Enter the password when prompted and check if the "laravel" database is available:
 
-        SHOW DATABASES;
+            SHOW DATABASES;
 
 
 ## 3. Create Model and Migration
